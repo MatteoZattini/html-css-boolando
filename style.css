@@ -7,10 +7,12 @@
 
 header{
     position: fixed;
+    top: 0;
     background-color: orange;
     width: 100vw;
     height: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 4;
 }
 
 .box-container{
@@ -38,12 +40,67 @@ i{
     color: white;
 }
 
+.container-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 70%;
+    height: 574px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid black;
+}
+
+.item{
+    position: relative;
+    width: calc(90% / 3);
+    height: 573px;
+    border: 1px solid black;
+}
+
+.item > img{
+    width: 100%;
+}
+
 .discount{
-    width: 40px;
-    height: 20px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.sost{
     background-color: green;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    bottom: 0;
+    left: 40px;
+    z-index: 3;
+}
+
+.heart{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
     text-align: center;
+    z-index: 3;
+}
+
+.front-img{
+    position: absolute;
+    z-index: 1;
+}
+
+.hover-img{
+    position: absolute;
+    display: none;
+    z-index: 2;
+}
+
+
+.item:hover .hover-img{
+    display: block;
 }
