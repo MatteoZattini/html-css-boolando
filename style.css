@@ -104,3 +104,7 @@ i{
 .item:hover .hover-img{
     display: block;
 }
+
+.heart:hover{
+    color: red;
+}
